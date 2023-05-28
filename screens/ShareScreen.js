@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View, StatusBar, ScrollView, Image, Pre
 import { TextToSpeechContext } from '../context/TextToSpeechContext';
 
 const ShareScreen = () => {
-    const url = 'https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN&gl=US'
+    const url = 'https://expo.dev/artifacts/eas/e9a1QfRuRvP5UDNXeSzsyi.apk'
     const onShare = async () => {
       try {
         const result = await Share.share({
