@@ -1,21 +1,20 @@
 import React, { useContext, useState } from 'react';
-import { Image, StyleSheet, Text, View, StatusBar, Pressable, FlatList, ScrollView, TouchableOpacity } from 'react-native';
-import { AntDesign, Entypo } from '@expo/vector-icons';
-import { BottomSheet } from 'react-native-btr';
-
+import { StyleSheet, Text, View, StatusBar, Pressable,  ScrollView } from 'react-native';
 import TextInputBox from '../components/TextInputBox';
-// import ControlBox from '../components/ControlBox';
 import { TextToSpeechContext } from '../context/TextToSpeechContext';
 import CustomDropdown from '../components/DropDown';
 
 const TextToSpeech = () => {
   const { saveText, theme, language } = useContext(TextToSpeechContext);
+
 console.log(language)
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: theme === 'light' ? '#F7EAFF' : '#242334',
-      marginTop: StatusBar.currentHeight,
+      marginTop: StatusBar.setNetworkActivityIndicatorVisible.currentHeight || 20,
+
     },
     headerContainer: {
       flexDirection: 'row',
@@ -130,6 +129,7 @@ console.log(language)
 
     }
   });
+
 
   return (
     <ScrollView style={styles.container}>

@@ -7,9 +7,9 @@ const CustomDropdown = ({ selectedValue }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const options = [
-    { label: 'English (USA)', value: 'en-US', flag: require('../assets/USA_FLAG.png') },
-    { label: 'English (UK)', value: 'en-AU', flag: require('../assets/BRITISH_FLAG.png') },
-    { label: 'English (IN)', value: 'en-IN', flag: require('../assets/INDIAN_FLAG.png') },
+    { label: 'English (USA)', value: 'en-us-x-sfg-network', flag: require('../assets/USA_FLAG.png') },
+    { label: 'English (UK)', value: 'en-au-x-aud-network', flag: require('../assets/BRITISH_FLAG.png') },
+    { label: 'English (IN)', value: 'en-in-x-end-network', flag: require('../assets/INDIAN_FLAG.png') },
     // Add more language options as needed
   ];
 

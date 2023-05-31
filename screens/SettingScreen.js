@@ -1,12 +1,11 @@
-import { SafeAreaView, StyleSheet, Text, View, StatusBar, Pressable, FlatList, ScrollView,TouchableOpacity } from 'react-native';
-import TextInputBox from '../components/TextInputBox';
+import {  StyleSheet, Text, View, StatusBar, Pressable, FlatList, ScrollView,TouchableOpacity } from 'react-native';
 import ControlBox from '../components/ControlBox';
 import { TextToSpeechContext } from '../context/TextToSpeechContext';
 import { useContext } from 'react';
 import { Entypo } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 const TextToSpeech = () => {
-  const { saveText, theme,
+  const {  theme,
     toggleTheme } = useContext(TextToSpeechContext);
     const styles = StyleSheet.create({
       toggleButton:{
@@ -109,9 +108,7 @@ const TextToSpeech = () => {
         <Text style={styles.headerText}>General Settings🔥</Text>
       </View>
       <ControlBox/>
-      <Pressable onPress={saveText} style={styles.saveBtn}>
-        <Text style={styles.textCountText}>Save</Text>
-      </Pressable>
+  
       {/* DarkMode Toggle Button */}
       <TouchableOpacity onPress={toggleTheme} style={styles.toggleButton}>
     {theme==='light'?(<Entypo name="moon" size={24} color="#55545F" />):(<Feather name="sun" size={24} color="#ffd700" />)}
